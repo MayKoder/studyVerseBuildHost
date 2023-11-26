@@ -6,9 +6,35 @@
     <title>Unity WebGL Player | WebPlatform</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      /* Add some basic styling for the horizontal div and links */
+      #horizontalDiv {
+        display: flex;
+        justify-content: space-around;
+        background-color: #181818;
+        padding: 10px;
+      }
+  
+      #horizontalDiv a {
+        text-decoration: none;
+        color: #f4eded;
+        font-weight: bold;
+        font-size: 16px;
+        transition: color 0.3s; /* Add transition effect for smooth color change */
+      }
+
+      #horizontalDiv a:hover {
+      color: rgb(0, 213, 255);
+    }
+    </style>
   </head>
-  <body>
+  <body style="background-color: #181818;">
     <div id="unity-container" class="unity-desktop">
+      <div id="horizontalDiv">
+        <a href="https://github.com/xdaniortega" target="_blank">Dani GitHub</a>
+        <a href="https://github.com/MayKoder" target="_blank">Miquel/MayKoder GitHub</a>
+        <a href="" target="_blank">David GitHub</a>
+      </div>
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
@@ -18,9 +44,7 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">WebPlatform</div>
       </div>
     </div>
     <script>
@@ -94,8 +118,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1280px";
+        canvas.style.height = "720px";
       }
 
       loadingBar.style.display = "block";
